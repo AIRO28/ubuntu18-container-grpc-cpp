@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package sample;
+
+service Sample {
+    rpc Calc_add (CalcNumber) returns (CalcResult) {}
+    rpc Calc_sub (CalcNumber) returns (CalcResult) {}
+    rpc Calc_mul (CalcNumber) returns (CalcResult) {}
+    rpc Calc_div (CalcNumber) returns (CalcResult) {}
+}
+
+message Empty {
+}
+
+message CalcNumber {
+    int32 x1 = 1;
+    int32 x2 = 2;
+}
+
+message CalcResult {
+    int32 y = 1;
+}
